@@ -18,9 +18,11 @@ export default class Edit extends Component {
   updateText( value ) {
     this.setState({ text: value });
   }
-
+ 
   updatePost() {
-
+    console.log('hello')
+    this.props.updatePostFn(this.props.id, this.state.text);
+    this.props.hideEdit();
   }
 
   render() {
